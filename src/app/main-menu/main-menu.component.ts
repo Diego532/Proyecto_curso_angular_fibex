@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import {GetHttpDataService} from '../get-http-data.service';
 
 
@@ -9,6 +9,7 @@ import {GetHttpDataService} from '../get-http-data.service';
 })
 export class MainMenuComponent implements OnInit {
 
+  @Input() item = '';
   public carreras = [];
   title = 'my-aviacion'
   constructor(private getData : GetHttpDataService) { 
@@ -18,7 +19,9 @@ export class MainMenuComponent implements OnInit {
     });
   }
 
-  
+  seleccionado(){
+    console.log('Seleccionado');
+  }
 
   ngOnInit(): void {
   }

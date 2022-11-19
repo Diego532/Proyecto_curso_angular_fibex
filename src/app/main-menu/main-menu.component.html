@@ -24,13 +24,8 @@
           <p>{{carrera['Carrera']}}</p>
         </td>
         <td> 
-          <input type="radio" id="{{carreras.indexOf(carrera)}}">
-          
+          <input type="radio" id="{{carreras.indexOf(carrera)}}" value="{{carrera['Carrera']}}" (change)="seleccionado()">
         </td>
       </tr>
       
     </div>
-
-    <script>
-      const boton = document.getElementById()
-    </script>
